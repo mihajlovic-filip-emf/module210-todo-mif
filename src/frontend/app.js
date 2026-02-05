@@ -115,3 +115,16 @@ $(document).ready(function () {
     }
   }
 });
+
+// Theme toggle (light/dark) + mémorisation
+const savedTheme = localStorage.getItem("theme");
+
+// par défaut : dark si rien n'est enregistré
+document.documentElement.setAttribute("data-theme", savedTheme || "dark");
+
+$("#theme-toggle").on("click", function () {
+  const current = document.documentElement.getAttribute("data-theme") || "dark";
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+});

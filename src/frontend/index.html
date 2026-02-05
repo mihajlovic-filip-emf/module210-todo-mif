@@ -28,7 +28,18 @@
   </head>
   <body>
     <div class="app-container">
-      <h1>Todo App is really cool</h1>
+      <header>
+        <h1>Todo App</h1>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Changer le thème"
+        >
+          <span class="icon sun" aria-hidden="true">☀️</span>
+          <span class="icon moon" aria-hidden="true">🌙</span>
+        </button>
+      </header>
       <form id="todo-form" autocomplete="off">
         <input
           type="text"
