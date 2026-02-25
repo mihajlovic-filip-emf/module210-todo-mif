@@ -61,8 +61,9 @@ jobs:
           ###### End of Repository/Build Configurations ######
 
   lighthouse_job:
-  name: Lighthouse CI Action
+  runs-on: ubuntu-latest
   steps:
+    - uses: actions/checkout@v5
     - name: Lighthouse CI Action
       uses: treosh/lighthouse-ci-action@12.6.1
       with:
