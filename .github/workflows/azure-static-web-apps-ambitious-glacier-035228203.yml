@@ -70,7 +70,7 @@ jobs:
         with:
           urls: |
             https://to-do.filipmihajovic.emf-informatique.ch/
-          configPath: /lighthouserc.json
+          configPath: ./.lighthouserc.json
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
