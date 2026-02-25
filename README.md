@@ -13,7 +13,7 @@ This application is made of two parts:
 
 * frontend (Client)
     - web UI that communicates with REST endpoints available through an API app (see below).
-    - in the [frontend](srv/frontend) folder.
+    - in the [frontend](src/frontend) folder.
     - a simple JS app
 * backend (API)
     - uses the [MariaDB Node.js Connector](https://github.com/mariadb-corporation/mariadb-connector-nodejs) to connect to MariaDB.
