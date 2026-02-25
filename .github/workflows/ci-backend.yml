@@ -5,7 +5,7 @@ on:
     branches:
       - main # Déclenchement lorsque le code est poussé sur main
 
-env:
+env.
   REG_NAME: "acrinfofd22210.azurecr.io" # Nom du registy
   IMAGE_NAME: "todo-backend-filip" # Nom de votre image
   VERSION: "1.1"
@@ -21,5 +21,5 @@ jobs:
       - name: etape à réaliser
         run: |
           echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login ${{ env.REG_NAME }} -u "${{ secrets.REGISTRY_USERNAME }}" --password-stdin
-          docker build -t ${{env:REG_NAME}}/${{env:IMAGE_NAME}} ./dockerfile
-          docker push ${{env:REG_NAME}}/${{env:IMAGE_NAME}}:${{env:VERSION}}
+          docker build -t ${{env.REG_NAME}}/${{env.IMAGE_NAME}} ./dockerfile
+          docker push ${{env.REG_NAME}}/${{env.IMAGE_NAME}}:${{env.VERSION}}
