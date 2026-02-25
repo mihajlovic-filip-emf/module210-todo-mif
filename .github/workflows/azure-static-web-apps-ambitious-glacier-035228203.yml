@@ -61,16 +61,15 @@ jobs:
           ###### End of Repository/Build Configurations ######
 
   lighthouse_job:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v4
-
-    - name: Lighthouse CI Action
-      uses: treosh/lighthouse-ci-action@12.6.1
-      with:
-        urls: |
-          https://to-do.filipmihajovic.emf-informatique.ch/
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lighthouse CI Action
+        uses: treosh/lighthouse-ci-action@12.6.1
+        with:
+          urls: |
+            https://to-do.filipmihajovic.emf-informatique.ch/
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
