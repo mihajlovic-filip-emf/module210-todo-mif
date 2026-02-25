@@ -20,6 +20,6 @@ jobs:
 
       - name: etape à réaliser
         run: |
-          docker login ${{ENV:REG_NAME}}
+          echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login ${{ env.REG_NAME }} -u "${{ secrets.REGISTRY_USERNAME }}" --password-stdin
           docker build -t ${{ENV:REG_NAME}}/${{ENV:IMAGE_NAME}} ./dockerfile
-          docker {push/pull} ${{ENV:REG_NAME}}/${{ENV:IMAGE_NAME}}:${{ENV:VERSION}}
+          docker push ${{ENV:REG_NAME}}/${{ENV:IMAGE_NAME}}:${{ENV:VERSION}}
