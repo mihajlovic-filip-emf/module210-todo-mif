@@ -7,4 +7,3 @@ This sample application requires the following to be installed/enabled on your m
 * [MariaDB command-line client](https://mariadb.com/products/skysql/docs/clients/mariadb-clients/mariadb-client/) (optional), used to connect to MariaDB database instances.
 
  
-              
